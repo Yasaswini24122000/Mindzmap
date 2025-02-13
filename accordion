@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            padding: 50px 20px;
+        }
+
+        .faq-container {
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .faq-left {
+            max-width: 40%;
+        }
+
+        .faq-left h3 {
+            color: #007bff;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .faq-left h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .faq-button {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .faq-button:hover {
+            background: #0056b3;
+        }
+
+        .faq-right {
+            max-width: 55%;
+        }
+
+        .accordion {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-header {
+            background: none;
+            border: none;
+            outline: none;
+            width: 100%;
+            text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-header:focus {
+            outline: none;
+        }
+
+        .accordion-content {
+            display: none;
+            padding-bottom: 15px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .accordion.active .accordion-content {
+            display: block;
+        }
+
+        .accordion-header span {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        @media (max-width: 768px) {
+            .faq-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .faq-left {
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .faq-right {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="faq-container">
+        <div class="faq-left">
+            <h3>DAPIBUS</h3>
+            <h1>Maecenas convallis ante non nibh</h1>
+            <a href="#" class="faq-button">More FAQs →</a>
+        </div>
+        <div class="faq-right">
+            <div class="accordion">
+                <button class="accordion-header">Mauris sed massa sed justo viverra blandit<span>+</span></button>
+                <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt tempus diam ac scelerisque.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button class="accordion-header">Curabitur lacinia in tellus eget tempus?<span>+</span></button>
+                <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button class="accordion-header">Fusce tristique elit non augue malesuada ullamcorper?<span>-</span></button>
+                <div class="accordion-content" style="display: block;">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt tempus diam ac scelerisque.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button class="accordion-header">Praesent et malesuada fames ac ante ipsum primis in faucibus?<span>+</span></button>
+                <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button class="accordion-header">Curabitur libero enim, blandit sit amet nunc id, luctus sollicitudin eros?<span>+</span></button>
+                <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordion = button.parentElement;
+                const isActive = accordion.classList.contains('active');
+
+                document.querySelectorAll('.accordion').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.accordion-header span').textContent = "+";
+                });
+
+                if (!isActive) {
+                    accordion.classList.add('active');
+                    button.querySelector('span').textContent = "-";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
