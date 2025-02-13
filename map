@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section with World Map</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #003b99; /* Dark blue background */
+            color: white;
+        }
+
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+            padding: 50px 20px;
+            min-height: 80vh;
+        }
+
+        .hero-content {
+            max-width: 50%;
+        }
+
+        .hero-content h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        .hero-content h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .learn-more {
+            display: inline-block;
+            color: #7eb9ff;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .learn-more:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .hero-image {
+            max-width: 45%;
+            text-align: right;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-image {
+                max-width: 100%;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h3>NAM ACCUMSAN</h3>
+            <h1>Sed sit amet sapien vitae odio facilisis consequat unc maximus nisi eu</h1>
+            <p>Vestibulum porta vulputate tellus, in varius massa tristique et. Mauris sed massa sed justo viverra blandit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+            <p>Vestibulum porta vulputate tellus, in varius massa tristique et. Mauris sed massa sed justo viverra blandit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+            <a href="#" class="learn-more">Learn more →</a>
+        </div>
+        <div class="hero-image">
+            <img src="world-map.png" alt="World Map"> 
+        </div>
+    </section>
+
+</body>
+</html>
