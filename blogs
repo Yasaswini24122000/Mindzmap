@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Section</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            padding: 50px 20px;
+        }
+
+        .blog-section {
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .blog-section h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .blog-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 30%;
+            text-align: left;
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 20px;
+        }
+
+        .blog-content h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .blog-content .date {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .blog-content p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .blog-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .blog-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="blog-section">
+        <h1>Latest Blogs</h1>
+        <div class="blog-container">
+            <div class="blog-card">
+                <img src="blog1.jpg" alt="Blog 1">
+                <div class="blog-content">
+                    <h2>How to Improve Web Design Skills</h2>
+                    <span class="date">February 13, 2025</span>
+                    <p>Learn the best tips and techniques to enhance your web design abilities.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="blog2.jpg" alt="Blog 2">
+                <div class="blog-content">
+                    <h2>Top 10 CSS Tricks You Should Know</h2>
+                    <span class="date">February 10, 2025</span>
+                    <p>Discover the best CSS tricks to make your website look modern and professional.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="blog3.jpg" alt="Blog 3">
+                <div class="blog-content">
+                    <h2>Why Responsive Design Matters</h2>
+                    <span class="date">February 5, 2025</span>
+                    <p>Learn why responsive design is crucial for modern web development.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
