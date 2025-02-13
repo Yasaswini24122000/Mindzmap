@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .footer {
+            background-color: #00338d; /* Dark Blue Background */
+            color: white;
+            padding: 40px 20px;
+            text-align: left;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-column {
+            width: 22%;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid white;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .footer-column p, 
+        .footer-column a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+        .newsletter-btn {
+            background-color: #008CFF;
+            color: white;
+            padding: 10px 15px;
+            display: inline-block;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .newsletter-btn:hover {
+            background-color: #0072cc;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            opacity: 0.7;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 14px;
+            border-top: 1px solid white;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-column {
+                width: 100%;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <div class="footer-column">
+                <h3>Locations</h3>
+                <p><strong>India</strong><br>+91 00000 00000<br>info@mindzmap.com</p>
+                <p><strong>USA</strong><br>+1 000 000 0000<br>info@mindzmap.com</p>
+                <p><strong>UK</strong><br>+44 0000 000000<br>info@mindzmap.com</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a><br>
+                <a href="#">About Us</a><br>
+                <a href="#">Industries</a><br>
+                <a href="#">Capabilities</a><br>
+                <a href="#">Careers</a><br>
+                <a href="#">Contact Us</a><br>
+                <a href="#">Videos</a><br>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Industries</h3>
+                <a href="#">Aerospace</a><br>
+                <a href="#">Medical</a><br>
+                <a href="#">Oil & Gas</a><br>
+                <a href="#">Industrial</a><br>
+                <a href="#">Embedded Systems</a><br>
+                <a href="#">Energy</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for useful tips, news, and resources.</p>
+                <a href="#" class="newsletter-btn">Yes, Sign Me Up! →</a>
+                
+                <div class="social-icons">
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
+                    <a href="#">🔗</a>
+                    <a href="#">✉️</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 All Rights Reserved. MindzMap.
+        </div>
+    </footer>
+
+</body>
+</html>
